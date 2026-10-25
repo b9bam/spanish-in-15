@@ -444,6 +444,7 @@ details.paste textarea { font: .85rem/1.4 ui-monospace, Menlo, monospace; margin
 .week-tag a { color: var(--muted); }
 .snake { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .snode-wrap { position: relative; transform: translateX(calc(var(--x) * 44px)); }
+.snode-wrap.has-start { margin-top: 44px; }
 .snode {
   width: 72px; height: 66px; border-radius: 50%; border: none; cursor: pointer; display: grid; place-items: center;
   background: var(--accent); color: #fff; box-shadow: 0 6px 0 #5c1328; transition: transform .08s ease, box-shadow .08s ease;

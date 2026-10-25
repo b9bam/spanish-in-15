@@ -4,7 +4,7 @@
   Week files (data/weeks/weekNN.js) are cached the first time they are opened.
   Bump CACHE when you want every visitor to drop old files at once.
 */
-var CACHE = "spanish15-v4";
+var CACHE = "spanish15-v5";
 var SHELL = [
   "./",
   "index.html",

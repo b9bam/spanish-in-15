@@ -43,8 +43,9 @@
       var st = nodeState(d), rev = d.type === "review";
       var icon = st === "done" ? SVG.check : (st === "locked" || st === "soon") ? SVG.lock : (rev ? SVG.trophy : SVG.star);
       var label = "Day " + d.id + ": " + d.title + ". " + { done: "Completed", current: "Start here", locked: "Locked", soon: "Coming soon" }[st];
-      return '<li class="snode-wrap" style="--x:' + OFFS[idx % OFFS.length] + '">' +
-        (st === "current" && !startShown && (startShown = true) ? '<span class="start-tag" aria-hidden="true">START</span>' : "") +
+      var showStart = st === "current" && !startShown && (startShown = true);
+      return '<li class="snode-wrap' + (showStart ? " has-start" : "") + '" style="--x:' + OFFS[idx % OFFS.length] + '">' +
+        (showStart ? '<span class="start-tag" aria-hidden="true">START</span>' : "") +
         '<button type="button" class="snode ' + st + (rev ? " review" : "") + '" data-node="' + d.id + '" aria-label="' + esc(label) + '" aria-expanded="false">' + icon + "</button></li>";
     }
     var startShown = false;
